@@ -17,10 +17,16 @@ public class FirstRepeatingChar {
 
         Set<Character> set = new HashSet<>();
 
-        for (char each : str.toCharArray()) {
+        // one way
+        for (Character ch : str.toCharArray()) if (!set.add(ch)) return ch;
+
+        //another way
+      /*  for (char each : str.toCharArray()) {
             if (set.contains(each)) return each;
             else set.add(each);
         }
+
+       */
 
         return null;
 
